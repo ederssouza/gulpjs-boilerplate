@@ -1,0 +1,21 @@
+
+// core
+@import "core/_variables";
+@import "core/_mixins";
+@import "core/_fonts";
+@import "core/_reset";
+@import "core/_grid";
+
+// components
+// @import "components/..";
+
+// layout
+// @import "layout/..";
+
+
+$primary-color: green;
+
+body {
+	background-color: #fff;
+	color: $primary-color;
+}
