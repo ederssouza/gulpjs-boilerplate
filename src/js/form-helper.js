@@ -14,23 +14,23 @@ function isPhone(phone){
     numbers.push(number);
   }
 
-  var verify = false;
+  var check = false;
 
   if(regexPhone.exec(phone)){
 
     for (i = 0; i <= 9; i++) {
 
       if(validation[3] === numbers[i] || validation[4] === numbers[i]) {
-        verify = true;
+        check = true;
         break;
       }
     }
 
   } else {
-    verify = true;
+    check = true;
   }
 
-  return verify;
+  return check;
 }
 
 
@@ -39,20 +39,22 @@ function isPhone(phone){
  */
 
 function isCPF(cpf) {
-  cpf = cpf.replace(/[^\d]+/g,'');
-  if(cpf == '') return false;
+
+  cpf = cpf.replace(/[^\d]+/g, '');
+
+  if(cpf === '') return false;
 
   if (cpf.length != 11 ||
-      cpf == "00000000000" ||
-      cpf == "11111111111" ||
-      cpf == "22222222222" ||
-      cpf == "33333333333" ||
-      cpf == "44444444444" ||
-      cpf == "55555555555" ||
-      cpf == "66666666666" ||
-      cpf == "77777777777" ||
-      cpf == "88888888888" ||
-      cpf == "99999999999")
+      cpf == '00000000000' ||
+      cpf == '11111111111' ||
+      cpf == '22222222222' ||
+      cpf == '33333333333' ||
+      cpf == '44444444444' ||
+      cpf == '55555555555' ||
+      cpf == '66666666666' ||
+      cpf == '77777777777' ||
+      cpf == '88888888888' ||
+      cpf == '99999999999')
     return false;
 
   add = 0;
@@ -81,9 +83,9 @@ function isCPF(cpf) {
  */
 
 function isCNPJ(cnpj) {
-  cnpj = cnpj.replace(/[^\d]+/g,'');
+  cnpj = cnpj.replace(/[^\d]+/g, '');
 
-  if(cnpj == '') return false;
+  if(cnpj === '') return false;
 
   if (cnpj.length != 14)
     return false;

@@ -1,6 +1,4 @@
 
-// http://usejsdoc.org/
-
 /**
  *  @param {object} elem - element selector
  *  @param {string} cls  - element class
@@ -35,7 +33,7 @@ function removeClass(elem, cls) {
     var currentClass = elem.className;
 
     if(currentClass.indexOf(cls) > 1){
-      newClass = currentClass.replace(cls,'');
+      newClass = currentClass.replace(cls, '');
       elem.className = newClass;
     }
   }
@@ -50,16 +48,16 @@ function removeClass(elem, cls) {
 function toggleClass(elem, cls) {
 
   if (elem.classList){
-    elem.classList.toggle(elemClass);
+    elem.classList.toggle(cls);
 
   } else {
     var currentClass = elem.className;
 
-    if(currentClass.indexOf(elemClass) > -1){
-      newClass = currentClass.replace(elemClass,"");
+    if(currentClass.indexOf(cls) > -1){
+      newClass = currentClass.replace(cls, '');
 
     } else {
-      newClass = currentClass + " " + elemClass;
+      newClass = currentClass + ' ' + cls;
     }
     elem.className = newClass;
   }
@@ -250,10 +248,10 @@ function fadeOut(elem) {
 
 function isHidden(elem) {
 
-  var style       = window.getComputedStyle(elem),
-      display     = style.getPropertyValue('display'),
-      visibility  = style.getPropertyValue('visibility'),
-      opacity     = style.getPropertyValue('opacity');
+  var style      = window.getComputedStyle(elem),
+      display    = style.getPropertyValue('display'),
+      visibility = style.getPropertyValue('visibility'),
+      opacity    = style.getPropertyValue('opacity');
 
   if(display === 'none' || visibility === 'hidden' || opacity === '0'){
     return true;
