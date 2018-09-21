@@ -1,7 +1,7 @@
 {
-  "name": "sprite-svg",
-  "version": "1.0.0",
-  "description": "",
+  "name": "gulpjs-boilerplate",
+  "version": "1.0.1",
+  "description": "Front-end template for new projects.",
   "main": "index.js",
   "scripts": {
     "gulp": "./node_modules/.bin/gulp"
